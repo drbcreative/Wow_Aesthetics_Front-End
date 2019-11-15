@@ -1,0 +1,54 @@
+/* ************************************************************************** */
+/* Top Bar ****************************************************************** */
+/* ************************************************************************** */
+.topbar {
+  display: none;
+
+  .topbar-link:not(:last-child) {
+    margin-right: .5rem;
+  }
+
+  .topbar-lead-copy {
+    font-family: $font-secondary;
+    font-size: 0.8125rem;
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .col-middle {
+    justify-self: center;
+  }
+
+  .col-right {
+    display: flex;
+
+    .topbar-link:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  @include isMedium {
+    padding: 0 .5rem;
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    background: rgba($color-white, 1);
+  }
+
+  @include isXLarge {
+    padding: 0 .5rem;
+    grid-template-columns: max-content 1fr max-content;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    background: rgba($color-white, 1);
+  }
+
+  @include isRetina {
+    padding: 0 2rem;
+
+  }
+}

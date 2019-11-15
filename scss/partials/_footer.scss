@@ -1,0 +1,75 @@
+/* ************************************************************************** */
+/* FOOTER Sections ********************************************************** */
+/* ************************************************************************** */
+
+/* footer 1 ***************************************************************** */
+.footer-1 {
+  .containerish {
+    display: grid;
+
+    @include isLarge {
+      grid-template-columns: 1fr 2fr;
+      padding: 20px;
+      column-gap: 1rem;
+    }
+
+    @include isXLarge {
+      grid-template-columns: 1fr 2fr;
+      padding: 20px 0;
+      column-gap: 1rem;
+    }
+
+    .footer-left {
+      background: $color-light-accent;
+      padding: 2rem 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .footer-copy {
+        font-family: $font-primary;
+        font-size: 1rem;
+      }
+    }
+
+    .footer-right {
+      img {
+        object-fit: cover;
+        min-height: 100%;
+      }
+    }
+  }
+}
+
+/* footer 2 ***************************************************************** */
+.footer2 {
+  background-color: $color-main;
+  width: 100%;
+  padding: 0.6rem 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  .containerish {
+    display: grid;
+    align-items: center;
+
+    .topbar-link {
+      color: $color-white;
+    }
+
+    .topbar-link:not(:last-child) {
+      margin-right: .5rem;
+    }
+
+    .small-footer-link:hover,
+    .topbar-link:hover {
+      color: $color-dark;
+      text-decoration: none !important;
+    }
+
+    @include isMedium {
+      grid-template-columns: max-content 1fr max-content;
+    }
+  }
+}
