@@ -9,23 +9,12 @@
     background-position: center center;
   }
 
-  .desktop-logo {
-    display: none;
-
-    @include isXLarge {
-      display: block;
-      width: 274.14px;
-      height: 122.19px;
-      position: absolute;
-      top: 3rem;
-      left: 2rem;
-    }
-  }
-
   .containerish {
     display: flex;
     align-items: flex-end;
     padding: 40px 20px;
+    position: relative;
+    overflow: visible;
 
     @include isMedium {
       height: 650px;
@@ -35,6 +24,23 @@
       height: 735px;
       align-items: center;
       padding-left: 2rem;
+    }
+
+    .desktop-logo {
+      display: none;
+
+      @include isXLarge {
+        display: block;
+        width: 274.14px;
+        height: 122.19px;
+        position: absolute;
+        top: 3rem;
+        left: 2rem;
+      }
+
+      @include isRetina {
+        left: -1rem;
+      }
     }
 
     .section-info {
