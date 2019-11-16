@@ -1,6 +1,8 @@
 /* ************************************************************************** */
 /* Main Page Sections ******************************************************* */
 /* ************************************************************************** */
+
+/* hero ********************************************************************* */
 .hero {
   background: url('../../images/hero-bg@2x.jpg') center left / cover;
   position: relative;
@@ -53,5 +55,40 @@
         margin-top: 8rem;
       }
     }
+  }
+}
+
+/* tempsure ***************************************************************** */
+.tempsure {
+  background: url('../../images/tempsure-bg@2x.jpg') center / cover;
+  padding: 40px 20px;
+
+  @include isXLarge {
+    padding: 100px 20px;
+  }
+
+  .containerish {
+    display: grid;
+    row-gap: 1rem;
+
+    @include isMedium {
+      row-gap: 3rem;
+    }
+
+    @include isLarge {
+      row-gap: 0;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1rem;
+    }
+
+    .section-img {
+      margin-bottom: 1rem;
+
+      @include isXLarge {
+        margin-bottom: 3rem;
+      }
+    }
+
+    .section-info {}
   }
 }
