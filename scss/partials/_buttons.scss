@@ -28,7 +28,7 @@
   // border-radius: 50px;
   @include btn-fade;
 
-  @include isLarge {
+  @include isMedium {
     width: 250px;
     padding: 1rem 1rem;
   }
@@ -62,6 +62,34 @@
   }
 }
 
+/* Light Button Color ******************************************************* */
+.ui-btn-light {
+  background-color: #A1B0C3;
+  border: 1px solid #A1B0C3;
+  color: $color-white;
+
+  &:hover {
+    color: $color-white;
+    border: 1px solid lighten(#A1B0C3, 10);
+    background-color: lighten(#A1B0C3, 10);
+    text-decoration: none;
+  }
+}
+
+/* Dark Button Color ******************************************************* */
+.ui-btn-dark {
+  background-color: #6C7B8E;
+  border: 1px solid #6C7B8E;
+  color: $color-white;
+
+  &:hover {
+    color: $color-white;
+    border: 1px solid lighten(#6C7B8E, 10);
+    background-color: lighten(#6C7B8E, 10);
+    text-decoration: none;
+  }
+}
+
 /* Light Accent Button Color ************************************************ */
 .ui-btn-light-accent {
   background-color: $color-light-accent;
@@ -77,7 +105,7 @@
 }
 
 /* Light Accent Button Color Outline */
-.ui-btn-accent-ol {
+.ui-btn-light-accent-ol {
   background-color: transparent;
   border: 1px solid $color-light-accent;
   color: $color-light-accent;

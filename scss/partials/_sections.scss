@@ -1,3 +1,51 @@
 /* ************************************************************************** */
 /* Main Page Sections ******************************************************* */
 /* ************************************************************************** */
+.hero {
+  background: url('../../images/hero-bg@2x.jpg') center left / cover;
+  position: relative;
+
+  @include isMedium {
+    background-position: center center;
+  }
+
+  .desktop-logo {
+    display: none;
+
+    @include isXLarge {
+      display: block;
+      width: 274.14px;
+      height: 122.19px;
+      position: absolute;
+      top: 3rem;
+      left: 2rem;
+    }
+  }
+
+  .containerish {
+    display: flex;
+    align-items: flex-end;
+    padding: 40px 20px;
+
+    @include isMedium {
+      height: 650px;
+    }
+
+    @include isXLarge {
+      height: 735px;
+      align-items: center;
+      padding-left: 2rem;
+    }
+
+    .section-info {
+      @include isMedium {
+        width: 75%;
+        max-width: 570px;
+      }
+
+      @include isXLarge {
+        margin-top: 8rem;
+      }
+    }
+  }
+}

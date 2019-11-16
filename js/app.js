@@ -30,6 +30,43 @@
 //   }
 // });
 
+/* Navbar Location */
+
+/* Check to see window width */
+const hero = document.querySelector('.hero'),
+  header = document.querySelector('header'),
+  navWrapper = document.querySelector('.nav-wrapper');
+
+/* Load Menu location based on initial screen width */
+document.addEventListener('DOMContentLoaded', () => {
+  const winWidth = window.innerWidth;
+
+  if (winWidth >= 1200) {
+    hero.appendChild(navWrapper);
+  } else {
+    // do nothing
+  }
+});
+
+/* Relocate Navbar based on Window Width */
+window.addEventListener('resize', () => {
+  const winWidth = window.innerWidth;
+  if (winWidth >= 1200) {
+    hero.appendChild(navWrapper);
+    console.log('This is a test');
+
+  } else if (winWidth < 1200) {
+    header.appendChild(navWrapper);
+    console.log('This is a dougie houser');
+
+  }
+});
+
+
+/* Relocate Navbar to Footer when scrolling down page */
+
+
+
 /* Animation */
 function animateCSS(element, animationName) {
 

@@ -8,7 +8,7 @@
   font-size: 0.8125rem;
   // font-weight: 700;
   line-height: 1rem;
-  color: $color-dark-accent;
+  color: $color-dark;
   @include linkFade;
 
   &:hover {
@@ -22,7 +22,7 @@
 
 .nav-link {
   font-family: $font-secondary !important;
-  color: $color-dark-accent !important;
+  color: $color-dark !important;
   font-size: 0.875rem !important;
   @include linkFade;
 
