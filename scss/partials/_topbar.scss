@@ -2,57 +2,66 @@
 /* Top Bar ****************************************************************** */
 /* ************************************************************************** */
 .topbar {
-  display: grid;
-  grid-template-columns: max-content 1fr;
-  align-items: center;
-  padding: 0 .5rem;
+  background: $color-white;
 
-  .col-right {
-    justify-content: flex-end;
-  }
+  .containerish {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    padding: 0 .5rem;
 
-  .topbar-link:not(:last-child) {
-    margin-right: .5rem;
-  }
-
-  .topbar-lead-copy {
-    font-family: $font-secondary;
-    font-size: 0.8125rem;
-    padding: 0;
-    margin: 0;
-    font-weight: 700;
-  }
-
-  .col-middle {
-    justify-self: center;
-  }
-
-  .col-right {
-    display: flex;
+    .col-right {
+      justify-content: flex-end;
+    }
 
     .topbar-link:not(:last-child) {
-      margin-right: 1rem;
+      margin-right: .5rem;
     }
-  }
 
-  @include isMedium {
-    grid-template-columns: max-content 1fr max-content;
-    align-items: center;
-    height: 30px;
-    width: 100%;
-    background: rgba($color-white, 1);
-  }
+    .topbar-lead-copy {
+      font-family: $font-secondary;
+      font-size: 0.8125rem;
+      padding: 0;
+      margin: 0;
+      font-weight: 700;
+    }
 
-  @include isXLarge {
-    grid-template-columns: max-content 1fr max-content;
-    align-items: center;
-    height: 30px;
-    width: 100%;
-    background: rgba($color-white, 1);
-  }
+    .col-middle {
+      justify-self: center;
 
-  @include isRetina {
-    padding: 0 2rem;
+      // @include isRetina {
+      //   justify-self: flex-end;
+      // }
+    }
 
+    .col-right {
+      display: flex;
+
+      .topbar-link:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+
+    @include isMedium {
+      grid-template-columns: max-content 1fr max-content;
+      align-items: center;
+      height: 30px;
+      width: 100%;
+      background: rgba($color-white, 1);
+    }
+
+    @include isXLarge {
+      grid-template-columns: max-content 1fr max-content;
+      align-items: center;
+      height: 30px;
+      width: 100%;
+      background: rgba($color-white, 1);
+    }
+
+    @include isRetina {
+      padding: 0 2rem;
+      // grid-template-columns: max-content 1fr .5fr;
+
+    }
   }
 }

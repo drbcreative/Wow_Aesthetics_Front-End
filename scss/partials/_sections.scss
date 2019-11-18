@@ -4,7 +4,7 @@
 
 /* hero ********************************************************************* */
 .hero {
-  background: url('../../images/hero-bg@2x.jpg') center left / cover;
+  background: url('../images/hero-bg@2x.jpg') center left / cover;
   position: relative;
 
   @include isMedium {
@@ -41,7 +41,7 @@
       }
 
       @include isRetina {
-        left: -1rem;
+        left: 2rem;
       }
     }
 
@@ -54,13 +54,14 @@
       @include isXLarge {
         margin-top: 8rem;
       }
+
     }
   }
 }
 
 /* tempsure ***************************************************************** */
 .tempsure {
-  background: url('../../images/tempsure-bg@2x.jpg') center / cover;
+  background: url('../images/tempsure-bg@2x.jpg') center / cover;
   padding: 40px 20px;
 
   @include isXLarge {
@@ -81,6 +82,12 @@
       column-gap: 1rem;
     }
 
+    @include isRetina {
+      row-gap: 0;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 4rem;
+    }
+
     .section-img {
       margin-bottom: 1rem;
 
@@ -95,7 +102,7 @@
 
 /* biote ******************************************************************** */
 .biote {
-  background: url('../../images/biote-bg@2x.jpg') center / cover;
+  background: url('../images/biote-bg@2x.jpg') center / cover;
 
   @include isMedium {
     height: 800px;
@@ -111,7 +118,7 @@
     overflow: visible;
 
     .section-info {
-      background: rgba($color-white, .9);
+      background: rgba($color-white, 1);
       padding: 20px;
       box-shadow: 0 3px 50px rgba($color-dark, .2);
 
@@ -142,7 +149,7 @@
 
 /* botox and fillers ******************************************************** */
 .botox-fillers {
-  background: url('../../images/botox-bg@2x.jpg') center / cover;
+  background: url('../images/botox-bg@2x.jpg') center / cover;
   padding: 40px 20px;
 
   @include isXLarge {
@@ -193,7 +200,7 @@
 
 /* PRP ********************************************************************** */
 .prp {
-  background: url('../../images/prp-bg@2x.jpg') center left / cover;
+  background: url('../images/prp-bg@2x.jpg') center left / cover;
   padding: 40px 20px;
 
   @include isMedium {
@@ -229,7 +236,7 @@
 
 /* laser hair removal ******************************************************* */
 .laser-hair {
-  background: url('../../images/laser-hair-removal-bg@2x.jpg') center right / cover;
+  background: url('../images/laser-hair-removal-bg@2x.jpg') center right / cover;
   padding: 40px 20px;
 
   @include isMedium {
@@ -244,7 +251,6 @@
 
   @include isXLarge {
     background-position: top left;
-
   }
 
   .containerish {
@@ -252,11 +258,13 @@
     height: inherit;
 
     .section-info {
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 60%;
+      @include isMedium {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60%;
+      }
 
       @include isLarge {
         width: 50%;
@@ -264,6 +272,228 @@
 
       @include isXLarge {
         padding: 0 1rem;
+      }
+    }
+  }
+}
+
+/* doc bios ***************************************************************** */
+.dr-bios {
+  background: url('../images/about-us-bg@2x.jpg') center / cover;
+  padding: 40px 20px;
+
+  @include isXLarge {
+    padding: 80px 20px 175px 20px;
+  }
+
+  .containerish {
+    display: grid;
+    row-gap: 1.5rem;
+
+    @include isMedium {
+      grid-template-columns: 1fr 1fr;
+      row-gap: 0;
+      grid-gap: 1rem;
+    }
+
+    @include isLarge {
+      grid-gap: 4rem;
+    }
+
+    @include isXLarge {
+      grid-gap: 6rem;
+    }
+
+    @include isRetina {
+      grid-gap: 8rem;
+    }
+
+    .col-left,
+    .col-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .bio-img {
+        width: 318px;
+        height: 318px;
+        border-radius: 50%;
+
+        @include isMedium {
+          width: 218px;
+          height: 218px;
+        }
+
+        @include isLarge {
+          width: 318px;
+          height: 318px;
+        }
+      }
+
+      .section-info {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
+
+/* newsletter *************************************************************** */
+.newsletter {
+  @include isXLarge {
+    height: 500px;
+  }
+
+  .containerish {
+    display: grid;
+    overflow: visible;
+
+    @include isLarge {
+      grid-template-columns: 1fr 2fr;
+    }
+
+    @include isXLarge {
+      grid-template-columns: 530px 1fr;
+      margin-top: -120px;
+    }
+
+    .col-left {
+      background: url('../images/newsletter-img@2x.jpg') center top / cover;
+      height: 300px;
+
+      @include isMedium {
+        height: 350px;
+      }
+
+      @include isXLarge {
+        height: 423px;
+      }
+    }
+
+    .col-right {
+      background: $color-main;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .section-info {
+        padding: 1rem;
+
+        @include isXLarge {
+          padding: 0 1.5rem;
+        }
+
+        .newsletter-form {
+          display: grid;
+          row-gap: .5rem;
+
+          @include isLarge {
+            grid-template-columns: 1fr 1fr;
+            column-gap: 1rem;
+            row-gap: 1rem;
+            align-items: center;
+          }
+
+          input,
+          button {
+            height: 61px;
+          }
+
+          ::placeholder {
+            padding-left: 1rem !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* appointments ************************************************************* */
+.appointment-wrapper {
+  background: #F7F9FA;
+
+  @include isXLarge {
+    padding: 20px;
+  }
+
+  @include isRetina {
+    padding: 40px 20px;
+  }
+
+
+  .appointment-top {
+    background: url('../images/request-appt-img@2x.jpg') center / cover;
+    height: 300px;
+    position: relative;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    @include isXLarge {
+      height: 550px;
+    }
+
+    @include isRetina {
+      height: 725px;
+    }
+
+    .appt-logo {
+      position: absolute;
+      top: 25px;
+      left: -50px;
+      width: 286.9px;
+      height: 72.44px;
+
+      @include isRetina {
+        width: 386.9px;
+        height: 82.44px;
+        // left: 25px;
+      }
+    }
+
+  }
+
+  .appointments-bottom {
+    position: relative;
+
+    @include isXLarge {
+      height: 400px;
+    }
+
+    .containerish {
+      background: $color-white;
+      box-shadow: 0 3px 50px rgba($color-dark, .2);
+      padding: 40px 20px;
+
+      @include isXLarge {
+        position: absolute;
+        top: -2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 99;
+      }
+
+      @include isRetina {
+        top: -6rem
+      }
+
+      .section-info {
+        @include isLarge {
+          padding: 2rem 2rem;
+        }
+
+        .appointment-form {
+          display: grid;
+          row-gap: .5rem;
+
+          @include isMedium {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem;
+          }
+
+          @include isLarge {
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1rem;
+          }
+        }
       }
     }
   }
