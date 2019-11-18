@@ -150,10 +150,10 @@
 .ui-btn-white {
   background-color: #fff;
   border: 1px solid #fff;
-  color: $color-main;
+  color: $color-dark;
 
   &:hover {
-    color: $color-main;
+    color: $color-dark;
     background-color: darken(#fff, 15);
     border: 1px solid darken(#fff, 15);
     text-decoration: none;
