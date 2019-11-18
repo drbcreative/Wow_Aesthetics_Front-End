@@ -92,3 +92,101 @@
     .section-info {}
   }
 }
+
+/* biote ******************************************************************** */
+.biote {
+  background: url('../../images/biote-bg@2x.jpg') center / cover;
+
+  @include isMedium {
+    height: 800px;
+  }
+
+  @include isLarge {
+    height: 1032px;
+  }
+
+  .containerish {
+    position: relative;
+    height: inherit;
+    overflow: visible;
+
+    .section-info {
+      background: rgba($color-white, .9);
+      padding: 20px;
+      box-shadow: 0 3px 50px rgba($color-dark, .2);
+
+      @include isMedium {
+        position: absolute;
+        width: 80%;
+        max-width: 717px;
+        bottom: 0;
+        right: 0;
+        padding: 2rem;
+      }
+
+      @include isLarge {
+        padding: 4rem 6rem;
+      }
+
+      @include isXLarge {
+        bottom: -4rem;
+      }
+
+      @include isRetina {
+        bottom: -8rem;
+        right: -3rem;
+      }
+    }
+  }
+}
+
+/* botox and fillers ******************************************************** */
+.botox-fillers {
+  background: url('../../images/botox-bg@2x.jpg') center / cover;
+  padding: 40px 20px;
+
+  @include isXLarge {
+    height: 900px;
+  }
+
+  @include isRetina {
+    height: 1056px;
+  }
+
+  .containerish {
+    display: grid;
+    row-gap: 1rem;
+
+    @include isLarge {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
+      align-items: center;
+    }
+
+    @include isXLarge {
+      margin-top: 8rem;
+    }
+
+    @include isRetina {
+      margin-top: 14rem;
+      grid-gap: 2rem;
+    }
+
+    .col-right {
+      display: grid;
+      row-gap: 1rem;
+
+      @include isMedium {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 0;
+        grid-gap: 1rem;
+      }
+
+      @include isLarge {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+        row-gap: 1rem;
+      }
+    }
+  }
+}
